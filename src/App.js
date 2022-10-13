@@ -5,8 +5,8 @@
 */
 
 import React, {useState} from 'react';
-import { SearchBar } from './components/SearchBar/SearchBar';
-import { Posts } from './components/Posts/Posts';
+import SearchBar from './components/SearchBar/SearchBar';
+import Posts from './components/Posts/Posts';
 import dummyData from './dummy-data';
 import './App.css';
 
@@ -40,7 +40,7 @@ const App = () => {
   return (
     <div className='App'>
       <SearchBar searchTerm={searchTerm} />
-      <Posts />
+      <Posts likePost={likePost} posts={posts}/>
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );
